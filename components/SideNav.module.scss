@@ -1,0 +1,51 @@
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+}
+
+.openSideNav {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    opacity: 0.9;
+}
+.closeButton {
+    height: 3rem !important;
+    padding: 1rem 1rem;
+    border-radius: 50%;
+    width: 3rem;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 2rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+.item {
+    line-height: 3rem;
+    color: #fff;
+    font-size: 1.5rem;
+}

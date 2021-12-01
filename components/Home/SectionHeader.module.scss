@@ -1,0 +1,25 @@
+.header {
+    margin: 5rem 0rem 0rem 0rem;
+    background: linear-gradient(95deg, #408853 40%, #234e2f 100%);
+    padding: 50px 0px 50px 0px;
+    z-index: -4;
+    position: relative;
+}
+
+.title,
+.text {
+    text-align: center;
+    color: #fff;
+}
+.title {
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 540px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+}

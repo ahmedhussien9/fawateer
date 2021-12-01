@@ -1,0 +1,35 @@
+.informationContainer {
+    .content {
+        width: 100%;
+        text-align: center;
+        max-width: 850px;
+        margin: auto;
+        padding: 3rem 1rem 5rem 0rem;
+        .title {
+            font-size: 60px;
+            color: var(--primary-color);
+            padding-bottom: 25px;
+            position: relative;
+            display: inline-block;
+            @media screen and (max-width: 600px) {
+                font-size: 30px;
+            }
+            &:before {
+                position: absolute;
+                bottom: 0px;
+                content: " ";
+                width: 30%;
+                background: var(--primary-color);
+                height: 3px;
+                left: 35%;
+            }
+        }
+        .text {
+            font-size: 18px;
+            transition: all 0.2s ease-in-out;
+            padding-top: 0px;
+            margin-top: 0px;
+            font-weight: lighter;
+        }
+    }
+}

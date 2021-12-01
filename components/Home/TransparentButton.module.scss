@@ -1,0 +1,14 @@
+.transparentButton {
+    color: #29b965;
+    background: transparent;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 1px solid #29b965;
+    padding: 0.9rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    &:hover {
+        background: #29b965;
+        color: #fff;
+    }
+}

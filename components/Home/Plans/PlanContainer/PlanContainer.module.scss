@@ -1,0 +1,25 @@
+.container {
+    background: #fff;
+    box-shadow: 5px 12px 59px 20px #00000017;
+    padding: 4.5rem 30px;
+    margin-top: -80px;
+    position: relative;
+}
+
+.planHeaderContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2.5rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.5px;
+}
+.text {
+    margin-top: 0px;
+    margin-bottom: 2rem;
+    text-align: center;
+}

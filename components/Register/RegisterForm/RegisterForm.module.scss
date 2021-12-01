@@ -1,0 +1,41 @@
+.formWrap {
+    width: 100%;
+    padding: 0rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 118px;
+    gap: 1rem;
+}
+.invalid {
+    border-color: red;
+}
+@media screen and (min-width: 700px) {
+    .formWrap {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+.input {
+    width: 100%;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    height: 45px;
+    margin-top: 1rem;
+    padding: 0rem 1rem;
+    font-size: 0.9rem;
+}
+.textDanger {
+    margin-top: 0.5rem;
+    color: red;
+}
+.label {
+    font-weight: 500;
+}

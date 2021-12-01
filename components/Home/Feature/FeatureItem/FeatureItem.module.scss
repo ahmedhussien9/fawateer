@@ -1,0 +1,20 @@
+.item {
+    display: inline-grid;
+    grid-template-columns: 80px 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 1.2rem auto;
+}
+
+.title {
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+.text {
+    padding: 0px 0px;
+    margin: 0px;
+    font-weight: lighter;
+}
+.itemDetails {
+    width: 90%;
+}

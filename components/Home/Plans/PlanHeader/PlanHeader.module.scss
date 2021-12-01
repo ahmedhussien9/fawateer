@@ -1,0 +1,62 @@
+.card {
+    background: #fff;
+    text-align: center;
+    border: 1px solid #f1f1f1;
+    padding: 1rem 1rem;
+    width: 140px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.title {
+    font-size: 1.2rem;
+    margin: 0rem;
+}
+.text {
+    margin: 0rem;
+}
+
+@media screen and (max-width: 508px) {
+    .card {
+        background: #fff;
+        text-align: center;
+        border: 1px solid #f1f1f1;
+        padding: 0.5rem 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .title {
+        font-size: 0.9rem;
+        margin: 0rem;
+    }
+    .text {
+        font-size: 0.7rem;
+        letter-spacing: 0px;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    .card {
+        background: #fff;
+        text-align: center;
+        border: 1px solid #f1f1f1;
+        padding: 0.5rem 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .title {
+        font-size: 0.6rem;
+        margin: 0rem;
+    }
+    .text {
+        font-size: 0.6rem;
+        letter-spacing: 0px;
+    }
+}
+
+.active {
+    background: #29b965;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+    transform: scaleY(1.1) scaleX(1.1);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+}

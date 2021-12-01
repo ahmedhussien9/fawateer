@@ -1,0 +1,161 @@
+{
+    "Home": {
+        "Banner": {
+            "en-US": {
+                "title": "Grow your business",
+                "subTitle": "with Fawateer",
+                "text": "Digitalize and automate e-invoice processing",
+                "subText": "as per the country regulation",
+                "buttonTitle": "Subscribe"
+            },
+
+
+            "ar": {
+                "title": "Grow your business",
+                "subTitle": "with Fawateer",
+                "text": "Digitalize and automate e-invoice processing",
+                "subText": "as per the country regulation",
+                "buttonTitle": "إشترك"
+            }
+        },
+        "BrandInformation": {
+            "en-US": {
+                "title": "What is fawateer?",
+                "text": "Fawateer is a solution that consists of issuing, transmitting, receiving, processing and storing invoices electronically, using specific document formats, these are digital throughout the entire document life cycle, from issuance to archiving.",
+                "subText": "Fawateer can help replace manual tasks with automated business rules and actions to increase efficiency, minimize and error handling."
+            },
+            "ar": {
+                "title": "What is fawateer?",
+                "text": "Fawateer is a solution that consists of issuing, transmitting, receiving, processing and storing invoices electronically, using specific document formats, these are digital throughout the entire document life cycle, from issuance to archiving.",
+                "subText": "Fawateer can help replace manual tasks with automated business rules and actions to increase efficiency, minimize and error handling."
+            }
+        },
+        "Services": {
+            "en-US": [
+                {
+                    "title": "Digital",
+                    "text": "Achieve complete digital invoice handling",
+                    "image": "/digital.svg"
+                },
+                {
+                    "title": "Compliant",
+                    "text": "Ensure compliance to country regulations",
+                    "image": "/compliant.svg"
+                },
+                {
+                    "title": "Secure",
+                    "text": "High access and data security",
+                    "image": "/secure.svg"
+                },
+                {
+                    "title": "Accurate data",
+                    "text": "Guarantees accurate data on inbound and outbound invoices",
+                    "image": "/accurate-data.svg"
+                }
+            ],
+            "ar": [
+                {
+                    "title": "Digital",
+                    "text": "Achieve complete digital invoice handling",
+                    "image": "/digital.png"
+                }
+            ]
+        },
+        "Features": {
+            "img": "/mobile.png",
+            "items": {
+                "en-US": [
+                    {
+                        "title": "Automatically receive and send invoices",
+                        "text": "Automating invoices results in faster payment period, it helps your business save costs, increase scalability, and achieve the best ROI possible.",
+                        "image": "/feature-icons/f1.svg"
+                    },
+                    {
+                        "title": "Multiple formats supported",
+                        "text": "Fawateer supports multiple formats and automatically convert information into structured data in specific format.",
+                        "image": "/feature-icons/f2.svg"
+                    },
+                    {
+                        "title": "Dynamic QR code",
+                        "text": "Fawateer system generates e-invoices with QR code that enable consumers to scan in invoices using their mobile phone.",
+                        "image": "/feature-icons/f3.svg"
+                    },
+                    {
+                        "title": "Reachability",
+                        "text": "Fawateer enables to send direct SMS and WhatsApp messages to your customers anywhere for generated invoices, language and content are customizable",
+                        "image": "/feature-icons/f4.svg"
+                    },
+                    {
+                        "title": "Customize your invoices branding",
+                        "text": "Fawateer allows you to customize your invoices content and branding.",
+                        "image": "/feature-icons/f5.svg"
+                    },
+                    {
+                        "title": "Archiving",
+                        "text": "Fawateer archives the e-invoices and provides the possibility to manage all of your invoices with ease by storing them in one place.",
+                        "image": "/feature-icons/f6.svg"
+                    },
+                    {
+                        "title": "Seamless integration",
+                        "text": "Fawateer provides a safe and high integration capability with external systems (tax authority system, internal systems ..)",
+                        "image": "/feature-icons/f7.svg"
+                    },
+                    {
+                        "title": "Advanced analytics",
+                        "text": "Fawateer can help businesses acquire more insights about their invoices providing managers with the capability to make smart, timely, and informed decisions.",
+                        "image": "/feature-icons/f8.svg"
+                    }
+                ],
+                "ar": [
+                    {}
+                ]
+            }
+        },
+        "Benefits": {
+            "items": {
+                "title": "Fawateer Benefits",
+                "en-US": [
+                    {
+                        "title": "Real-time delivery and processing",
+                        "image": "/benefit-icons/b1.svg"
+                    },
+                    {
+                        "title": "Quick invoice delivery and period closing",
+                        "image": "/benefit-icons/b2.svg"
+                    },
+                    {
+                        "title": "No human errors",
+                        "image": "/benefit-icons/b3.svg"
+                    },
+                    {
+                        "title": "Data exchange quickly and securely",
+                        "image": "/benefit-icons/b4.svg"
+                    },
+                    {
+                        "title": "Reduced invoicing costs",
+                        "image": "/benefit-icons/b5.svg"
+                    },
+                    {
+                        "title": "Environmentally friendly",
+                        "image": "/benefit-icons/b6.svg"
+                    },
+                    {
+                        "title": "Faster processing",
+                        "image": "/benefit-icons/b7.svg"
+                    },
+                    {
+                        "title": "Efficient implementation",
+                        "image": "/benefit-icons/b8.svg"
+                    },
+                    {
+                        "title": "High traceability",
+                        "image": "/benefit-icons/b9.svg"
+                    }
+                ],
+                "ar": [
+                    {}
+                ]
+            }
+        }
+    }
+}

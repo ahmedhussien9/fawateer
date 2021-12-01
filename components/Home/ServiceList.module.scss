@@ -1,0 +1,19 @@
+.servicesContainer {
+    display: flex;
+    background: var(--bg-light-gray);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 20px;
+    padding: 1rem 0rem;
+    transition: all 0.5s ease-in-out;
+    @media screen and (min-width: 624px) {
+        grid-template-columns: repeat(2, 260px);
+    }
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: repeat(4, 260px);
+    }
+}

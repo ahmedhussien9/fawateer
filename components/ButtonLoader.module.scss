@@ -1,0 +1,27 @@
+.button {
+    height: 50px;
+    background-color: #29b965;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: lighter;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.button:disabled {
+    opacity: 0.5;
+}
+
+.spinner {
+    animation: spin infinite 1s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

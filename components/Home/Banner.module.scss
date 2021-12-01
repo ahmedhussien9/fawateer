@@ -1,0 +1,47 @@
+.banner {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    background-image: url(/images/banner.png);
+    background-repeat: no-repeat;
+    margin-top: 90px;
+    @media screen and (min-width: 860px) {
+        height: 43.5vw;
+    }
+    @media screen and (max-width: 600px) {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.56)), url(/images/banner.png);
+    }
+    .content {
+        padding: 0rem 3rem;
+        transition: all 0.3s ease-in-out;
+        .title {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        .text {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        @media screen and (max-width: 460px) {
+            padding: 0rem 1rem;
+            justify-content: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            .title {
+                color: var(--primary-color);
+                font-size: 2.5rem;
+            }
+            .text {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

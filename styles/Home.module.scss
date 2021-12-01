@@ -1,0 +1,12 @@
+@import "./scss/variables";
+
+.container {
+  color: $mainColor;
+  background: $mainColor;
+}
+
+.benefits {
+  background: linear-gradient(95deg, #408853 40%, #234e2f 100%);
+  padding: 119px 0px 200px 0px;
+  z-index: -4;
+}
