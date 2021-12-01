@@ -1,6 +1,6 @@
 export async function getPlansApi() {
   const res = await fetch(
-    "https://fawateer.azurewebsites.net/api/app/tiers/GetEditionsWithTiers"
+    "https://fawateer-test.azurewebsites.net/api/app/tiers/GetEditionsWithTiers"
   );
   const data = await res.json();
   const plans = planTiersHanlder(data);
