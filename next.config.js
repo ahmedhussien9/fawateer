@@ -10,6 +10,7 @@ module.exports = {
      * a non-locale prefixed path.
      */
     defaultLocale: "en-US",
+    localeDetection: false,
   },
   webpack(config) {
     config.module.rules.push({
