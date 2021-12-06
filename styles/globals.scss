@@ -6,14 +6,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  animation: 2s ease-out 0s 1 FadeIn;
+  [dir="rtl"] & {
+    font-family: "NotoSansArabic-Regular" !important;
+  }
 }
 
-// @font-face {
-//   font-family: "segoSemiBold";
-//   src: url("fonts/Segoe-UI-Semibold-600.ttf") format("ttf");
-//   font-weight: 600;
-//   font-style: normal;
-// }
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "NotoSansArabic-Regular";
+  src: url(/fonts/NotoSansArabic-Regular.ttf) format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 // h1,
 // h2 {
 //   font-family: segoSemiBold;

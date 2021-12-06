@@ -1,14 +1,21 @@
-export default function ValidatePassword(value) {
+export default function ValidatePassword(
+  value,
+  passwordIsRequired,
+  atLeast8Character,
+  atLeastLowerCharacter,
+  atLeastUpperCharacter,
+  atLeastOneDigit
+) {
   if (!value) {
-    return "Password is Required";
+    return passwordIsRequired;
   } else if (value.length < 8 || value.length > 15) {
-    return "Please fill at least 8 character";
+    return atLeast8Character;
   } else if (!value.match(/[a-z]/g)) {
-    return "Please enter at least lower character.";
+    return atLeastLowerCharacter;
   } else if (!value.match(/[A-Z]/g)) {
-    return "Please enter at least upper character.";
+    return atLeastUpperCharacter;
   } else if (!value.match(/[0-9]/g)) {
-    return "Please enter at least one digit.";
+    return atLeastOneDigit;
   } else {
     return "";
   }

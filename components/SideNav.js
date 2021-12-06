@@ -2,23 +2,17 @@ import styles from "./SideNav.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-function SideNav(props) {
-  const close = () => {
-    props.close(false);
-  };
-
+function SideNav({ isOpenSideNav, close }) {
   const login = () => {
     window.open("https://fawateer.azurewebsites.net/Account/Login", "_blank");
   };
 
   return (
     <div
-      className={`${styles.sideNav} ${
-        props.isOpenSideNav ? styles.openSideNav : ""
-      }`}
+      className={`${styles.sideNav} ${isOpenSideNav ? styles.openSideNav : ""}`}
     >
       <div className={styles.header}>
-        <button onClick={close} className={styles.closeButton}>
+        <button onClick={() => close(false)} className={styles.closeButton}>
           <Image
             src="/close.svg"
             alt="close sidenav"
@@ -42,8 +36,9 @@ function SideNav(props) {
               pathname: "/",
               hash: "banner",
             }}
+            onClick={() => close(false)}
           >
-            Home
+            <a onClick={() => close(false)}> Home</a>
           </Link>
         </li>
         <li className={`${styles.item} ${styles.link}`}>
@@ -53,7 +48,7 @@ function SideNav(props) {
               hash: "whatIsFawateer",
             }}
           >
-            What is fawateer?
+            <a onClick={() => close(false)}> What is fawateer?</a>
           </Link>
         </li>
 
@@ -64,7 +59,8 @@ function SideNav(props) {
               hash: "features",
             }}
           >
-            Features
+            <a onClick={() => close(false)}> Features</a>
+         
           </Link>
         </li>
         <li className={`${styles.item} ${styles.link}`}>
@@ -74,7 +70,7 @@ function SideNav(props) {
               hash: "benefits",
             }}
           >
-            Benefits
+            <a onClick={() => close(false)}> Benefits</a>
           </Link>
         </li>
 
@@ -85,16 +81,17 @@ function SideNav(props) {
               hash: "plans",
             }}
           >
-            Plans
+            <a onClick={() => close(false)}> Plans</a>
           </Link>
         </li>
+        
         <Link
           href={{
             pathname: "/",
             hash: "plans",
           }}
         >
-          Contact us
+          <a onClick={() => close(false)}> Contact us</a>
         </Link>
         <li className={`${styles.item} ${styles.link} ${styles.login}`}>
           <button onClick={login} className={styles.login}>

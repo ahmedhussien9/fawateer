@@ -21,8 +21,11 @@ export default function Home(props) {
     featureImage,
     features,
     planData,
+    locale,
+    footerData,
+    navBar,
+    plansStaticData,
   } = props;
-
   /**
    * Plan tiers which will hold all the plan tiers
    * Plans which will hold all the plans (Basic/Advanced/Premium)
@@ -55,7 +58,12 @@ export default function Home(props) {
 
   return (
     <div className={styles.container}>
-      <Layout title="Home page" description="This the description">
+      <Layout
+        title="Home page"
+        description="This the description"
+        footerDate={footerData}
+        navBar={navBar}
+      >
         <section id="banner">
           <Banner
             title={banner.title}
@@ -77,7 +85,8 @@ export default function Home(props) {
         <section id="features" className="container">
           <FeatureContainer
             image={featureImage}
-            items={features}
+            items={features.items}
+            title={features.title}
           ></FeatureContainer>
         </section>
 
@@ -93,6 +102,7 @@ export default function Home(props) {
             planChanged={planChanged}
             plans={plans}
             tiers={planTiers}
+            plansStaticData={plansStaticData}
           ></PlanContainer>
         </section>
       </Layout>
@@ -112,14 +122,19 @@ async function getData() {
 
 export async function getStaticProps(context) {
   const { locale } = context;
+  console.log(locale);
   const staticData = await getData();
   const bannerData = staticData.Home.Banner[locale];
   const brandInformation = staticData.Home.BrandInformation[locale];
   const ServicesData = staticData.Home.Services[locale];
-  const featuresData = staticData.Home.Features.items[locale];
+  const featuresData = staticData.Home.Features[locale];
   const featureImage = staticData.Home.Features.img;
-  const benefits = staticData.Home.Benefits.items[locale];
-  const benefitsTitle = staticData.Home.Benefits.items.title;
+  const benefits = staticData.Home.Benefits[locale].items;
+  const benefitsTitle = staticData.Home.Benefits[locale].title;
+  const footerData = staticData.Home.Footer[locale];
+  const navBar = staticData.Home.NavBar[locale];
+  const plansStaticData = staticData.Home.Plans[locale];
+
   let planData = null;
   try {
     planData = await getPlansApi();
@@ -136,6 +151,10 @@ export async function getStaticProps(context) {
       benefits: benefits,
       benefitsTitle: benefitsTitle,
       planData: planData,
+      locale: locale,
+      footerData: footerData,
+      navBar: navBar,
+      plansStaticData: plansStaticData,
     },
   };
 }

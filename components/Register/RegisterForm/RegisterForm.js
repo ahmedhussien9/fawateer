@@ -39,31 +39,51 @@ class RegisterForm extends React.Component {
         adminConfirmPassword: "",
       },
       loader: false,
+      registerForm: props.registerForm,
     };
   }
 
+  componentWillReceiveProps(newProps) {
+    this.setState({ registerForm: newProps.registerForm });
+  }
+
   validate = (name, value) => {
-    const { fields } = this.state;
+    const { fields, registerForm } = this.state;
+    const validationMsg = registerForm.validationMsg;
     switch (name) {
       case "tenantName":
-        return ValidateString(value);
+        return ValidateString(value, validationMsg.nameIsRequired);
       case "userName":
-        return ValidateString(value);
+        return ValidateString(value, validationMsg.userName);
       case "contactName":
-        return ValidateString(value);
+        return ValidateString(value, validationMsg.ContactNameIsRequired);
       case "taxId":
-        return ValidateString(value);
+        return ValidateString(value, validationMsg.taxId);
       case "adminEmailAddress":
-        return ValidateEmail(value);
+        return ValidateEmail(value, [
+          validationMsg.emailIsRequired,
+          validationMsg.emailIsNotValid,
+        ]);
       case "phone":
-        return ValidatePhone(value);
+        return ValidatePhone(
+          value,
+          validationMsg.phoneIsRequired,
+          validationMsg.validPhoneNumber
+        );
       case "adminPassword":
-        return ValidatePassword(value);
+        return ValidatePassword(
+          value,
+          validationMsg.passwordIsRequired,
+          validationMsg.atLeast8Character,
+          validationMsg.atLeastLowerCharacter,
+          validationMsg.atLeastUpperCharacter,
+          validationMsg.atLeastOneDigit
+        );
       case "adminConfirmPassword":
         if (!value) {
-          return "Confirm Password Required";
+          return validationMsg.confirmPassword;
         } else if (value !== fields.adminPassword) {
-          return "New Password and Confirm Password Must be Same";
+          return validationMsg.confirmPasswordIsNotMatched;
         } else {
           return "";
         }
@@ -137,12 +157,13 @@ class RegisterForm extends React.Component {
   };
 
   render() {
-    const { fields, errors } = this.state;
+    const { fields, errors, registerForm } = this.state;
     return (
       <div className={styles.formWrap}>
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            Tanant Name <span className={styles.required}>*</span>
+            {registerForm.labels.tenantName}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             type="text"
@@ -157,7 +178,8 @@ class RegisterForm extends React.Component {
         </div>
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            User Name <span className={styles.required}>*</span>
+            {registerForm.labels.userName}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             type="text"
@@ -172,7 +194,8 @@ class RegisterForm extends React.Component {
         </div>
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            E-mail <span className={styles.required}>*</span>
+            {registerForm.labels.email}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="adminEmailAddress"
@@ -190,7 +213,8 @@ class RegisterForm extends React.Component {
 
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            Contact Name <span className={styles.required}>*</span>
+            {registerForm.labels.contactName}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="contactName"
@@ -206,7 +230,8 @@ class RegisterForm extends React.Component {
         </div>
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            Phone <span className={styles.required}>*</span>
+            {registerForm.labels.phone}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="phone"
@@ -221,7 +246,8 @@ class RegisterForm extends React.Component {
         </div>
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            Tax <span className={styles.required}>*</span>
+            {registerForm.labels.taxId}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="taxId"
@@ -238,7 +264,8 @@ class RegisterForm extends React.Component {
 
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            Password <span className={styles.required}>*</span>
+            {registerForm.labels.password}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="adminPassword"
@@ -254,7 +281,8 @@ class RegisterForm extends React.Component {
         </div>
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            Confirm Password <span className={styles.required}>*</span>
+            {registerForm.labels.confirmPassword}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="adminConfirmPassword"
@@ -273,6 +301,7 @@ class RegisterForm extends React.Component {
         <ButtonLoader
           loading={this.state.loader}
           fetchData={this.handleSubmit}
+          title={registerForm.signUp}
         ></ButtonLoader>
       </div>
     );

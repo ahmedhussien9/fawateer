@@ -1,8 +1,13 @@
-export default function ValidateConfirmPassword(value, password) {
+export default function ValidateConfirmPassword(
+  value,
+  password,
+  confirmPassword,
+  confirmPasswordIsNotMatched
+) {
   if (!value) {
-    return "Confirm Password Required";
+    return confirmPassword;
   } else if (value !== password) {
-    return "New Password and Confirm Password Must be Same";
+    return confirmPasswordIsNotMatched;
   } else {
     return "";
   }

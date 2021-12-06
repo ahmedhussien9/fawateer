@@ -1,16 +1,19 @@
 // import { Link } from "react-scroll";
+import { Html } from "next/document";
 import styles from "./Navbar.module.scss";
 import Image from "next/image";
 import logo from "/public/logo.png";
 import { Fragment } from "react/cjs/react.production.min";
 import SideNav from "../../SideNav";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-export default function Navbar(props) {
-  const router = useRouter();
+import { handleChanageLang } from "../../../helpers/changeLanguge";
 
+export default function Navbar({ navBar }) {
+  const router = useRouter();
   const [isOpenSideNav, setSideNav] = useState(false);
+  const [locale, setLocale] = useState("ar");
   const sideNavHandler = () => {
     setSideNav((prev) => !prev);
   };
@@ -22,6 +25,18 @@ export default function Navbar(props) {
   const login = () => {
     window.open("https://fawateer.azurewebsites.net/Account/Login", "_blank");
   };
+
+  const onChangeLang = (lang) => {
+    handleChanageLang(lang);
+    setLocale(lang);
+    router.push(router.asPath, router.asPath, { locale: lang });
+  };
+
+  useEffect(() => {
+    const lang = localStorage.getItem("lang") || "ar";
+    onChangeLang(lang);
+    setLocale(lang);
+  }, [locale]);
 
   return (
     <Fragment>
@@ -37,7 +52,7 @@ export default function Navbar(props) {
                 hash: "banner",
               }}
             >
-              Home
+              {navBar.links.home}
             </Link>
           </li>
           <li className={`${styles.item} ${styles.link}`}>
@@ -47,7 +62,7 @@ export default function Navbar(props) {
                 hash: "whatIsFawateer",
               }}
             >
-              What is fawateer?
+              {navBar.links.WhatIsFawateer}
             </Link>
           </li>
 
@@ -58,7 +73,7 @@ export default function Navbar(props) {
                 hash: "features",
               }}
             >
-              Features
+              {navBar.links.features}
             </Link>
           </li>
           <li className={`${styles.item} ${styles.link}`}>
@@ -68,7 +83,7 @@ export default function Navbar(props) {
                 hash: "benefits",
               }}
             >
-              Benefits
+              {navBar.links.benefits}
             </Link>
           </li>
 
@@ -79,7 +94,7 @@ export default function Navbar(props) {
                 hash: "plans",
               }}
             >
-              Plans
+              {navBar.links.plans}
             </Link>
           </li>
           <li className={`${styles.item} ${styles.link}`}>
@@ -89,15 +104,26 @@ export default function Navbar(props) {
                 hash: "plans",
               }}
             >
-              Contact us
+              {navBar.links.contactUs}
             </Link>
           </li>
-
-          <li className={`${styles.item} ${styles.link} ${styles.login}`}>
-            <button onClick={login} className={styles.login}>
-              LOGIN
-            </button>
-          </li>
+          <div className={styles.actionBtn}>
+            <li className={`${styles.item}`}>
+              <select
+                value={locale}
+                onChange={(e) => onChangeLang(e.target.value)}
+              >
+                <option value="ar">{"عربي"}</option>
+                <option value="en-US">{"English"}</option>
+              </select>
+            </li>
+            <li
+              onClick={login}
+              className={`${styles.item} ${styles.link} ${styles.login}`}
+            >
+              {navBar.loginBtn}
+            </li>
+          </div>
           <li className={`${styles.item} ${styles.menu}`}>
             <button onClick={sideNavHandler} className={styles.menuButton}>
               <Image src="/menu.svg" alt="menu" height="30px" width="40px" />

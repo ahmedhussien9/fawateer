@@ -37,9 +37,9 @@ const Layout = (props) => {
           cardType: "summary_large_image",
         }}
       />
-      <Navbar />
+      <Navbar navBar={props.navBar} />
       {props.children}
-      <Footer></Footer>
+      <Footer footerDate={props.footerDate}></Footer>
     </div>
   );
 };

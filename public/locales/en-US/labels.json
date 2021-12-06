@@ -1,0 +1,10 @@
+{
+    "tenantName": "Tenant Name ",
+    "userName": "User Name",
+    "email": "Email",
+    "contactName": "Contact Name",
+    "phone": "Phone",
+    "taxId": "Tax",
+    "password": "Password",
+    "confirmPassword": "Confirm Password"
+}

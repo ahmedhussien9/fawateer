@@ -6,7 +6,7 @@ function PlanList(props) {
     <div className={styles.grid}>
       {tiers &&
         tiers.map((tier, index) => {
-          return <Plan key={tier.id} tier={tier}></Plan>;
+          return <Plan key={tier.id} id={tier.id} tier={tier}></Plan>;
         })}
     </div>
   );

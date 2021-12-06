@@ -3,7 +3,7 @@ import NumberFormat from "react-number-format";
 import Link from "next/link";
 
 function Plan(props) {
-  const { tier, key } = props;
+  const { tier, id } = props;
 
   const addEdition = () => {
     localStorage.setItem("Edition", JSON.stringify(tier));
@@ -13,7 +13,7 @@ function Plan(props) {
     <div
       className={styles.card}
       data-aos="flip-left"
-      key={key}
+      key={id}
       data-aos-easing="ease-out-cubic"
       data-aos-duration="2000"
     >

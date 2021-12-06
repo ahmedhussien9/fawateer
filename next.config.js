@@ -1,16 +1,10 @@
+const { i18 } = require("./next-i18next.config");
 module.exports = {
   reactStrictMode: true,
   i18n: {
-    /**
-     * Provide the locales you want to support in your application
-     */
-    locales: ["en-US", "ar"],
-    /**
-     * This is the default locale you want to be used when visiting
-     * a non-locale prefixed path.
-     */
-    defaultLocale: "en-US",
-    localeDetection: false,
+    locales: ["ar", "en-US"],
+    defaultLocale: "ar",
+    localeDetection: false
   },
   webpack(config) {
     config.module.rules.push({

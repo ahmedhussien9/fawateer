@@ -19,7 +19,7 @@ function FeatureContainer(props) {
       </div>
 
       <div className={styles.list}>
-        <h2 className={styles.title}>Features</h2>
+        <h2 className={styles.title}>{props.title}</h2>
         <FeatureList items={props.items} />
       </div>
     </div>

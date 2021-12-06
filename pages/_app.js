@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
+import { appWithTranslation } from "next-i18next";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -31,4 +32,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

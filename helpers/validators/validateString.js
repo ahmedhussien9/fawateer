@@ -1,6 +1,6 @@
-export default function ValidateString(value) {
+export default function ValidateString(value, msg) {
   if (!value || value.trim() === "") {
-    return "Contact name is Required";
+    return msg;
   } else {
     return "";
   }

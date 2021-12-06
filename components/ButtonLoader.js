@@ -10,7 +10,7 @@ export default function ButtonLoader(props) {
       <button className={styles.button} onClick={fetchData} disabled={loading}>
         {loading && <FaSpinner icon="spinner" className={styles.spinner} />}
         {loading}
-        {!loading && <span>SIGN UP</span>}
+        {!loading && <span>{props.title}</span>}
       </button>
     </div>
   );

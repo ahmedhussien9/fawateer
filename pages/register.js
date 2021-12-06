@@ -1,18 +1,21 @@
 import styles from "../styles/Register.module.scss";
 import Layout from "../components/Layout/Layout";
 import Plan from "../components/Home/Plans/Plan/Plan";
+import path from "path";
+import fs from "fs/promises";
 import { useEffect, useState } from "react";
 import SectionHeader from "../components/Home/SectionHeader";
 import RegisterForm from "../components/Register/RegisterForm/RegisterForm";
 import { useRouter } from "next/router";
 
-function Register() {
+function Register({ footerData, registerForm, navBar }) {
   const [tier, setTier] = useState(null);
   const { history } = useRouter();
+  
   useEffect(() => {
     return () => {
       if (history && history.action && history.action === "POP") {
-        history.replace(history.location.pathname /* the new state */);
+        history.replace(history.location.pathname);
       }
     };
   }, [history]);
@@ -29,12 +32,15 @@ function Register() {
 
   return (
     <div className={styles.container}>
-      <Layout title="Home page" description="This the description">
+      <Layout
+        title="Home page"
+        description="This the description"
+        footerDate={footerData}
+        navBar={navBar}
+      >
         <SectionHeader
-          title={"Register"}
-          text={
-            "We hope to ensure the correctness of the data entered when registering to activate your subscription"
-          }
+          title={registerForm.title}
+          text={registerForm.subTitel}
         />
         <div className={`${styles.registerWrapper} container`}>
           <div className={styles.registerContent}>
@@ -44,6 +50,7 @@ function Register() {
             <RegisterForm
               tierId={tier.id}
               editionId={tier.editionId}
+              registerForm={registerForm}
             ></RegisterForm>
           </div>
         </div>
@@ -53,3 +60,35 @@ function Register() {
 }
 
 export default Register;
+
+// Get static data from dummy file
+// read this data and then pass them as static props
+// to able to render them statically
+
+async function getData() {
+  const filePath = path.join(process.cwd(), "data", "dummy-data.json");
+  const jsonData = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData);
+  return data;
+}
+
+export async function getStaticProps(context) {
+  const { locale } = context;
+  const staticData = await getData();
+  const footerData = staticData.Home.Footer[locale];
+  const registerForm = staticData.Home.RegisterForm[locale];
+  const navBar = staticData.Home.NavBar[locale];
+
+  try {
+    planData = await getPlansApi();
+  } catch (err) {
+    // console.log(err);
+  }
+  return {
+    props: {
+      footerData: footerData,
+      registerForm: registerForm,
+      navBar: navBar,
+    },
+  };
+}

@@ -1,161 +1,439 @@
 {
-    "Home": {
-        "Banner": {
-            "en-US": {
-                "title": "Grow your business",
-                "subTitle": "with Fawateer",
-                "text": "Digitalize and automate e-invoice processing",
-                "subText": "as per the country regulation",
-                "buttonTitle": "Subscribe"
-            },
-
-
-            "ar": {
-                "title": "Grow your business",
-                "subTitle": "with Fawateer",
-                "text": "Digitalize and automate e-invoice processing",
-                "subText": "as per the country regulation",
-                "buttonTitle": "إشترك"
-            }
-        },
-        "BrandInformation": {
-            "en-US": {
-                "title": "What is fawateer?",
-                "text": "Fawateer is a solution that consists of issuing, transmitting, receiving, processing and storing invoices electronically, using specific document formats, these are digital throughout the entire document life cycle, from issuance to archiving.",
-                "subText": "Fawateer can help replace manual tasks with automated business rules and actions to increase efficiency, minimize and error handling."
-            },
-            "ar": {
-                "title": "What is fawateer?",
-                "text": "Fawateer is a solution that consists of issuing, transmitting, receiving, processing and storing invoices electronically, using specific document formats, these are digital throughout the entire document life cycle, from issuance to archiving.",
-                "subText": "Fawateer can help replace manual tasks with automated business rules and actions to increase efficiency, minimize and error handling."
-            }
-        },
-        "Services": {
-            "en-US": [
-                {
-                    "title": "Digital",
-                    "text": "Achieve complete digital invoice handling",
-                    "image": "/digital.svg"
-                },
-                {
-                    "title": "Compliant",
-                    "text": "Ensure compliance to country regulations",
-                    "image": "/compliant.svg"
-                },
-                {
-                    "title": "Secure",
-                    "text": "High access and data security",
-                    "image": "/secure.svg"
-                },
-                {
-                    "title": "Accurate data",
-                    "text": "Guarantees accurate data on inbound and outbound invoices",
-                    "image": "/accurate-data.svg"
-                }
-            ],
-            "ar": [
-                {
-                    "title": "Digital",
-                    "text": "Achieve complete digital invoice handling",
-                    "image": "/digital.png"
-                }
-            ]
-        },
-        "Features": {
-            "img": "/mobile.png",
-            "items": {
-                "en-US": [
-                    {
-                        "title": "Automatically receive and send invoices",
-                        "text": "Automating invoices results in faster payment period, it helps your business save costs, increase scalability, and achieve the best ROI possible.",
-                        "image": "/feature-icons/f1.svg"
-                    },
-                    {
-                        "title": "Multiple formats supported",
-                        "text": "Fawateer supports multiple formats and automatically convert information into structured data in specific format.",
-                        "image": "/feature-icons/f2.svg"
-                    },
-                    {
-                        "title": "Dynamic QR code",
-                        "text": "Fawateer system generates e-invoices with QR code that enable consumers to scan in invoices using their mobile phone.",
-                        "image": "/feature-icons/f3.svg"
-                    },
-                    {
-                        "title": "Reachability",
-                        "text": "Fawateer enables to send direct SMS and WhatsApp messages to your customers anywhere for generated invoices, language and content are customizable",
-                        "image": "/feature-icons/f4.svg"
-                    },
-                    {
-                        "title": "Customize your invoices branding",
-                        "text": "Fawateer allows you to customize your invoices content and branding.",
-                        "image": "/feature-icons/f5.svg"
-                    },
-                    {
-                        "title": "Archiving",
-                        "text": "Fawateer archives the e-invoices and provides the possibility to manage all of your invoices with ease by storing them in one place.",
-                        "image": "/feature-icons/f6.svg"
-                    },
-                    {
-                        "title": "Seamless integration",
-                        "text": "Fawateer provides a safe and high integration capability with external systems (tax authority system, internal systems ..)",
-                        "image": "/feature-icons/f7.svg"
-                    },
-                    {
-                        "title": "Advanced analytics",
-                        "text": "Fawateer can help businesses acquire more insights about their invoices providing managers with the capability to make smart, timely, and informed decisions.",
-                        "image": "/feature-icons/f8.svg"
-                    }
-                ],
-                "ar": [
-                    {}
-                ]
-            }
-        },
-        "Benefits": {
-            "items": {
-                "title": "Fawateer Benefits",
-                "en-US": [
-                    {
-                        "title": "Real-time delivery and processing",
-                        "image": "/benefit-icons/b1.svg"
-                    },
-                    {
-                        "title": "Quick invoice delivery and period closing",
-                        "image": "/benefit-icons/b2.svg"
-                    },
-                    {
-                        "title": "No human errors",
-                        "image": "/benefit-icons/b3.svg"
-                    },
-                    {
-                        "title": "Data exchange quickly and securely",
-                        "image": "/benefit-icons/b4.svg"
-                    },
-                    {
-                        "title": "Reduced invoicing costs",
-                        "image": "/benefit-icons/b5.svg"
-                    },
-                    {
-                        "title": "Environmentally friendly",
-                        "image": "/benefit-icons/b6.svg"
-                    },
-                    {
-                        "title": "Faster processing",
-                        "image": "/benefit-icons/b7.svg"
-                    },
-                    {
-                        "title": "Efficient implementation",
-                        "image": "/benefit-icons/b8.svg"
-                    },
-                    {
-                        "title": "High traceability",
-                        "image": "/benefit-icons/b9.svg"
-                    }
-                ],
-                "ar": [
-                    {}
-                ]
-            }
+  "Home": {
+    "Banner": {
+      "en-US": {
+        "title": "Grow your business",
+        "subTitle": "with Fawateer",
+        "text": "Digitalize and automate e-invoice processing",
+        "subText": "as per the country regulation",
+        "buttonTitle": "Subscribe"
+      },
+      "ar": {
+        "title": "طوّر أعمالك ",
+        "subTitle": "مع Fawateer ",
+        "text": "رقمنة و معالجة الفواتير الإلكترونية ",
+        "subText": "وفقًا لقوانين الدولة",
+        "buttonTitle": "إشترك"
+      }
+    },
+    "NavBar": {
+      "en-US": {
+        "loginBtn": "LOGIN",
+        "links": {
+          "home": "Home",
+          "WhatIsFawateer": "What is fawateer?",
+          "features": "Features",
+          "benefits": "Benefits",
+          "plans": "Plans",
+          "contactUs": "Contact us"
         }
+      },
+      "ar": {
+        "loginBtn": "دخول",
+        "links": {
+          "home": "الصفحة الرئيسية",
+          "WhatIsFawateer": "ما هو فواتير؟",
+          "features": "المميزات",
+          "benefits": "الفوائد",
+          "plans": "الخطط",
+          "contactUs": "تواصل معنا"
+        }
+      }
+    },
+    "Plans": {
+      "en-US": {
+        "title": "Fawateer Plans",
+        "text": "Subscribe to a plan"
+      },
+      "ar": {
+        "title": "خطط فواتير",
+        "text": "إشترك فى خطة أسعاد"
+      }
+    },
+    "BrandInformation": {
+      "en-US": {
+        "title": "What is fawateer?",
+        "text": "Fawateer is a solution that consists of issuing, transmitting, receiving, processing and storing invoices electronically, using specific document formats, these are digital throughout the entire document life cycle, from issuance to archiving.",
+        "subText": "Fawateer can help replace manual tasks with automated business rules and actions to increase efficiency, minimize and error handling."
+      },
+      "ar": {
+        "title": "ما هي الفاتورة الإلكترونية؟",
+        "text": "الفاتورة الإلكترونية هي حل يتكون من إصدار وإرسال واستلام ومعالجة وتخزين الفواتير إلكترونيًا , باستخدام تنسيقات و مستندات .",
+        "subText": "الفاتورة اليدوية وإجراءات العمل المؤتمنة لزيادة الكفاءة، وتقلل من الأخطاء و تعالجها."
+      }
+    },
+    "Services": {
+      "en-US": [
+        {
+          "title": "Digital",
+          "text": "Achieve complete digital invoice handling",
+          "image": "/digital.svg"
+        },
+        {
+          "title": "Compliant",
+          "text": "Ensure compliance to country regulations",
+          "image": "/compliant.svg"
+        },
+        {
+          "title": "Secure",
+          "text": "High access and data security",
+          "image": "/secure.svg"
+        },
+        {
+          "title": "Accurate data",
+          "text": "Guarantees accurate data on inbound and outbound invoices",
+          "image": "/accurate-data.svg"
+        }
+      ],
+      "ar": [
+        {
+          "title": "رقمي",
+          "text": "تحقيق معالجة كاملة للفواتير الرقمية",
+          "image": "/digital.png"
+        },
+        {
+          "title": "الامتثال",
+          "text": "ضمان الامتثال للوائح الدولة",
+          "image": "/compliant.svg"
+        },
+        {
+          "title": "الأمان ",
+          "text": "وصول سريع وأمن البيانات",
+          "image": "/secure.svg"
+        },
+        {
+          "title": "بيانات دقيقة",
+          "text": "يضمن بيانات دقيقة عن الفواتير الواردة والصادرة",
+          "image": "/accurate-data.svg"
+        }
+      ]
+    },
+    "Features": {
+      "img": "/mobile.png",
+      "en-US": {
+        "title": "Features",
+        "items": [
+          {
+            "title": "Automatically receive and send invoices",
+            "text": "Automating invoices results in faster payment period, it helps your business save costs, increase scalability, and achieve the best ROI possible.",
+            "image": "/feature-icons/f1.svg"
+          },
+          {
+            "title": "Multiple formats supported",
+            "text": "Fawateer supports multiple formats and automatically convert information into structured data in specific format.",
+            "image": "/feature-icons/f2.svg"
+          },
+          {
+            "title": "Dynamic QR code",
+            "text": "Fawateer system generates e-invoices with QR code that enable consumers to scan in invoices using their mobile phone.",
+            "image": "/feature-icons/f3.svg"
+          },
+          {
+            "title": "Reachability",
+            "text": "Fawateer enables to send direct SMS and WhatsApp messages to your customers anywhere for generated invoices, language and content are customizable",
+            "image": "/feature-icons/f4.svg"
+          },
+          {
+            "title": "Customize your invoices branding",
+            "text": "Fawateer allows you to customize your invoices content and branding.",
+            "image": "/feature-icons/f5.svg"
+          },
+          {
+            "title": "Archiving",
+            "text": "Fawateer archives the e-invoices and provides the possibility to manage all of your invoices with ease by storing them in one place.",
+            "image": "/feature-icons/f6.svg"
+          },
+          {
+            "title": "Seamless integration",
+            "text": "Fawateer provides a safe and high integration capability with external systems (tax authority system, internal systems ..)",
+            "image": "/feature-icons/f7.svg"
+          },
+          {
+            "title": "Advanced analytics",
+            "text": "Fawateer can help businesses acquire more insights about their invoices providing managers with the capability to make smart, timely, and informed decisions.",
+            "image": "/feature-icons/f8.svg"
+          }
+        ]
+      },
+      "ar": {
+        "title": "الخصائص",
+        "items": [
+          {
+            "title": "استلام وإرسال الفواتير تلقائيًا:",
+            "text": "تؤدي دفع الفواتير أوتوماتيكيا إلى فترة دفع أسرع ، وتساعد عملك على توفير التكاليف ، وزيادة قابلية التوسع ، وتحقيق أفضل عائد استثمار ممكن.",
+            "image": "/feature-icons/f1.svg"
+          },
+          {
+            "title": "دعم صيغ متعددة:",
+            "text": "للفاتورة بدعم تطبيق  تنسيقات متعددة ويقوم تلقائيًا بتحويل المعلومات إلى بيانات منظمة بتنسيق معين رمز الاستجابة السريعة الديناميكي  يقوم نظام الفاتورة الإلكترونية بإصدار فواتير إلكترونية برمز الاستجابة السريعة و QR Code لتمكين المستهلكين من مسح الفواتير باستخدام هواتفهم المحمول ",
+            "image": "/feature-icons/f2.svg"
+          },
+          {
+            "title": "رمز الاستجابة السريعة الديناميكي:",
+            "text": "تتيح الفاتورة الإلكترونية ارسال رسائل سمس و رسائل واتساب مباشرة الى عملائك في أي مكان للحصول على الفواتير المنشأة و اللغة و المحتوى القابل للتخصيص.",
+            "image": "/feature-icons/f3.svg"
+          },
+          {
+            "title": "قابلية الوصول ",
+            "text": "يتيح تطبيق فواتير إرسال رسائل SMS و WhatsApp مباشرة إلى عملائك في أي مكان للحصول على الفواتير المُنشأة واللغة والمحتوى قابل للتخصيص",
+            "image": "/feature-icons/f4.svg"
+          },
+          {
+            "title": "تخصيص العلامة التجارية لفواتيرك:",
+            "text": " تتيح تخصيص محتوى فواتيرك وعلامتك التجارية.",
+            "image": "/feature-icons/f5.svg"
+          },
+          {
+            "title": "الأرشفة:",
+            "text": "تقوم بأرشفة الفواتير الألكترونية و توفر إمكانية إدارة جميع فواتيرك بسهولة من خلال تخزينها في مكان واحد .",
+            "image": "/feature-icons/f6.svg"
+          },
+          {
+            "title": "تكامل سلس:",
+            "text": "توفر الفاتورة الإلكترونية قدرة تكامل آمنة وعالية مع الأنظمة الخارجية (نظام مصلحة الضرائب ، الأنظمة الداخلية ..)..)",
+            "image": "/feature-icons/f7.svg"
+          },
+          {
+            "title": "تحليلات متقدمة:",
+            "text": "يمكن للفاتورة الالكترونية مساعدة الشركات في الحصول على مزيد من الأفكار حول فواتيرها مما يوفر للمديرين القدرة على اتخاذ قرارات ذكية و في الوقت المناسب.",
+            "image": "/feature-icons/f8.svg"
+          }
+        ]
+      }
+    },
+    "Benefits": {
+      "en-US": {
+        "title": "Fawateer Benefits :",
+        "items": [
+          {
+            "title": "Real-time delivery and processing",
+            "image": "/benefit-icons/b1.svg"
+          },
+          {
+            "title": "Quick invoice delivery and period closing",
+            "image": "/benefit-icons/b2.svg"
+          },
+          {
+            "title": "No human errors",
+            "image": "/benefit-icons/b3.svg"
+          },
+          {
+            "title": "Data exchange quickly and securely",
+            "image": "/benefit-icons/b4.svg"
+          },
+          {
+            "title": "Reduced invoicing costs",
+            "image": "/benefit-icons/b5.svg"
+          },
+          {
+            "title": "Environmentally friendly",
+            "image": "/benefit-icons/b6.svg"
+          },
+          {
+            "title": "Faster processing",
+            "image": "/benefit-icons/b7.svg"
+          },
+          {
+            "title": "Efficient implementation",
+            "image": "/benefit-icons/b8.svg"
+          },
+          {
+            "title": "High traceability",
+            "image": "/benefit-icons/b9.svg"
+          }
+        ]
+      },
+      "ar": {
+        "title": " فوائد Fawateer :",
+        "items": [
+          {
+            "title": "التسليم في الوقت الحقيقي والمعالجة",
+            "image": "/benefit-icons/b1.svg"
+          },
+          {
+            "title": "تسليم الفاتورة السريع وإغلاق الفترة            ",
+            "image": "/benefit-icons/b2.svg"
+          },
+          {
+            "title": "لا أخطاء بشرية",
+            "image": "/benefit-icons/b3.svg"
+          },
+          {
+            "title": "تبادل البيانات بسرعة وأمان",
+            "image": "/benefit-icons/b4.svg"
+          },
+          {
+            "title": "انخفاض تكاليف الفواتير",
+            "image": "/benefit-icons/b5.svg"
+          },
+          {
+            "title": "صديق للبيئة",
+            "image": "/benefit-icons/b6.svg"
+          },
+          {
+            "title": "معالجة أسرع",
+            "image": "/benefit-icons/b7.svg"
+          },
+          {
+            "title": "لتنفيذ الفعال",
+            "image": "/benefit-icons/b8.svg"
+          },
+          {
+            "title": "مكانية تتبع عالية",
+            "image": "/benefit-icons/b9.svg"
+          }
+        ]
+      }
+    },
+    "RegisterForm": {
+      "en-US": {
+        "title": "Register",
+        "subTitel": "We hope to ensure the correctness of the data entered when registering to activate your subscription",
+        "signUp": "SIGN UP",
+        "labels": {
+          "tenantName": "Tenant Name ",
+          "userName": "User Name",
+          "email": "Email",
+          "contactName": "Contact Name",
+          "phone": "Phone",
+          "taxId": "Tax",
+          "password": "Password",
+          "confirmPassword": "Confirm Password"
+        },
+        "validationMsg": {
+          "nameIsRequired": "name is Required",
+          "phoneIsRequired": "Phone number is Required",
+          "validPhoneNumber": "valid Phone number",
+          "emailIsRequired": "Email is required",
+          "emailIsNotValid": "Email is incorrect!",
+          "taxId": "Tax ID is required",
+          "userName": "Username is required",
+          "passwordIsRequired": "Password is Required",
+          "atLeast8Character": "Please fill at least 8 character",
+          "atLeastLowerCharacter": "Please enter at least lower character",
+          "atLeastUpperCharacter": "Please enter at least upper character",
+          "atLeastOneDigit": "Please enter at least one digit",
+          "confirmPassword": "Please Confrim password is required",
+          "confirmPasswordIsNotMatched": "New password and confirm password must be same",
+          "ContactNameIsRequired": "Contact name is Required"
+        }
+      },
+      "ar": {
+        "title": "تسجيل دخول",
+        "subTitel": "نأمل التأكد من صحة البيانات المدخلة عند التسجيل لتفعيل اشتراكك",
+        "signUp": "تسجيل",
+        "labels": {
+          "tenantName": "اسم المستأجر",
+          "userName": "اسم المستخدم",
+          "email": "البريد الالكتروني",
+          "contactName": "اسم جهة الاتصال",
+          "phone": "هاتف",
+          "taxId": "ضريبة            ",
+          "password": "الرقم السري",
+          "confirmPassword": "تأكيد الرقم السري"
+        },
+        "validationMsg": {
+          "nameIsRequired": "الاسم مطلوب",
+          "userName": "أسم المستخدم مطلوب",
+          "phoneIsRequired": "رقم الهاتف مطلوب",
+          "taxId": "الرقم الضريبى مطلوب",
+          "validPhoneNumber": "رقم هاتف غير صحيح",
+          "emailIsRequired": "الإيميل مطلوب",
+          "emailIsNotValid": "الإيميل غير صحيح",
+          "passwordIsRequired": "كلمة المرور مطلوبة",
+          "atLeast8Character": "الرجاء ملء 8 أحرف على الأقل",
+          "atLeastLowerCharacter": "الرجاء إدخال حرف أقل على الأقل",
+          "atLeastUpperCharacter": "الرجاء إدخال الحرف العلوي على الأقل",
+          "atLeastOneDigit": "الرجاء إدخال رقم واحد على الأقل",
+          "confirmPassword": "كلمة المرور التأكيدى مطلوب",
+          "confirmPasswordIsNotMatched": "كلمة المرور غير مطابق",
+          "ContactNameIsRequired": "اسم جهة الاتصال مطلوب"
+        }
+      }
+    },
+    "Footer": {
+      "en-US": {
+        "Home": {
+          "title": "Home",
+          "links": [
+            {
+              "title": "What is fawateer?",
+              "href": "/banner"
+            },
+            {
+              "title": "Features",
+              "href": "/banner"
+            },
+            {
+              "title": "Benefits",
+              "href": "/banner"
+            }
+          ]
+        },
+        "Contact": {
+          "title": "Contact us",
+          "links": [
+            {
+              "title": "Privacy Policy",
+              "href": "/banner"
+            },
+            {
+              "title": "Contact Us",
+              "href": "/banner"
+            }
+          ]
+        },
+        "Updates": {
+          "title": "New Updates",
+          "links": [
+            {
+              "title": "Leave your email to get our latest updates",
+              "href": "/banner"
+            }
+          ]
+        }
+      },
+      "ar": {
+        "Home": {
+          "title": "الصفحة الرئيسية",
+          "links": [
+            {
+              "title": "ما هو فواتير؟",
+              "href": "/banner"
+            },
+            {
+              "title": "ميزات “Fawateer”",
+              "href": "/banner"
+            },
+            {
+              "title": " فوائد Fawateer",
+              "href": "/banner"
+            }
+          ]
+        },
+        "Contact": {
+          "title": "تواصل معنا",
+          "links": [
+            {
+              "title": "سياسة الخصوصية",
+              "href": "/banner"
+            },
+            {
+              "title": "اتصل بنا",
+              "href": "/banner"
+            }
+          ]
+        },
+        "Updates": {
+          "title": "تحديثات جديدة",
+          "links": [
+            {
+              "title": "اترك بريدك الإلكتروني لتحصل على آخر التحديثات",
+              "href": "/banner"
+            }
+          ]
+        }
+      }
     }
+  }
 }

@@ -5,7 +5,7 @@ import PlanList from "../PlanList/PlanList";
 import { Fragment } from "react/cjs/react.production.min";
 
 function PlanContainer(props) {
-  const { plans, tiers } = props;
+  const { plans, tiers, plansStaticData } = props;
   const [selectIndex, setSelectIndex] = useState(0);
 
   const planChangeHandler = (plan, index) => {
@@ -20,8 +20,8 @@ function PlanContainer(props) {
   return (
     <Fragment>
       <div className={`${styles.container} container`}>
-        <h2 className={styles.title}>Fawateer Plans</h2>
-        <p className={styles.text}>Subscribe to a plan</p>
+        <h2 className={styles.title}>{plansStaticData.title}</h2>
+        <p className={styles.text}>{plansStaticData.text}</p>
         <div className={styles.planHeaderContainer}>
           {plans &&
             plans.map((plan, i) => {
