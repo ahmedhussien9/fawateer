@@ -1,5 +1,3 @@
-// import { Link } from "react-scroll";
-import { Html } from "next/document";
 import styles from "./Navbar.module.scss";
 import Image from "next/image";
 import logo from "/public/logo.png";
@@ -36,7 +34,7 @@ export default function Navbar({ navBar }) {
     const lang = localStorage.getItem("lang") || "ar";
     onChangeLang(lang);
     setLocale(lang);
-  }, [locale]);
+  }, []);
 
   return (
     <Fragment>

@@ -43,8 +43,14 @@ class RegisterForm extends React.Component {
     };
   }
 
-  componentWillReceiveProps(newProps) {
-    this.setState({ registerForm: newProps.registerForm });
+  componentDidUpdate(newProps) {
+    const { registerForm } = this.setState;
+    if (
+      registerForm &&
+      registerForm.labels &&
+      registerForm.labels.tenantName !== registerForm.labels.tenantName
+    )
+      this.setState({ registerForm: newProps.registerForm });
   }
 
   validate = (name, value) => {
